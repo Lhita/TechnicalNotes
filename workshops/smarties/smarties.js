@@ -11,7 +11,6 @@ var findSmartiesByColor = function(smarties, color){
 
 };
 
-//findSmartiesByColor();
 
 var findMostAbundantSmartie = function(smarties){
 	var bigSmartie = {
@@ -54,11 +53,31 @@ var findSmartiesLessThan = function(smarties, qty){
 
 var findSmarties = function(){
 
+		
+
+
 };
 
-var groupSmarties = function(){
+//check smarties with the same color and group them together
+var groupSmarties = function(smartyList){
 
-};
+	var smartieGroup = {};
+
+	for(var i in smartyList) {
+		var currentSmartie = smartyList[i];
+		console.log(currentSmartie);
+		//?? describing of what to do now...
+		// var smartieGroup.color =[]
+		if(smartieGroup[currentSmartie.color]==undefined){
+			console.log(currentSmartie);
+			smartieGroup[currentSmartie.color]=0;
+		}
+		smartieGroup[currentSmartie.color]=smartieGroup[currentSmartie.color]+1
+
+	}
+	
+	return smartieGroup;
+};	
 
 var sortSmarties = function(){
 
